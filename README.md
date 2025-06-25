@@ -87,6 +87,16 @@ _Join over 25,000 of AI enthusiasts getting unique cutting-edge insights and fre
 
 ---
 
+<!-- Keep these links. Translations will automatically update with the README. -->
+[Deutsch](https://www.readme-i18n.com/NirDiamant/agents-towards-production?lang=de) | 
+[Español](https://www.readme-i18n.com/NirDiamant/agents-towards-production?lang=es) | 
+[français](https://www.readme-i18n.com/NirDiamant/agents-towards-production?lang=fr) | 
+[日本語](https://www.readme-i18n.com/NirDiamant/agents-towards-production?lang=ja) | 
+[한국어](https://www.readme-i18n.com/NirDiamant/agents-towards-production?lang=ko) | 
+[Português](https://www.readme-i18n.com/NirDiamant/agents-towards-production?lang=pt) | 
+[Русский](https://www.readme-i18n.com/NirDiamant/agents-towards-production?lang=ru) | 
+[中文](https://www.readme-i18n.com/NirDiamant/agents-towards-production?lang=zh)
+
 ## ✨ Introduction
 **Agents Towards Production** is your hands-on guide to every building block of a GenAI agent stack.  
 All knowledge is delivered through runnable tutorials covering orchestration, memory, observability, deployment, security, and more. Each tutorial lives in its own folder with ready-to-run notebooks or code files, so you can move from concept to working agent in minutes.
