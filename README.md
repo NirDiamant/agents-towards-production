@@ -224,6 +224,13 @@ All knowledge is delivered through runnable tutorials covering orchestration, me
       <a href="https://github.com/NirDiamant/agents-towards-production/tree/main/tutorials/agent-with-streamlit-ui"><img src="https://img.shields.io/badge/GitHub-View-blue" height="20"></a>
     </td>
   </tr>
+  <tr>
+    <td>Building an AI Writer App with Gradio</td>
+    <td>Create an AI-powered writing assistant using Gradio. This tutorial covers building a web app for drafting, editing, and generating text with an interactive chat interface, file upload, and session management for rapid prototyping and demos.</td>
+    <td align="center">
+      <a href="https://github.com/NirDiamant/agents-towards-production/tree/main/tutorials/agent-with-gradio-ui"><img src="https://img.shields.io/badge/GitHub-View-blue" height="20"></a>
+    </td>
+  </tr>
 </table>
 
 ### 🧩 Agent Frameworks
