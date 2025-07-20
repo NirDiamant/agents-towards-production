@@ -1,25 +1,53 @@
-let chromium;
-
-try {
-    chromium = require('playwright-core').chromium;
-} catch (error) {
-    if (error.code === 'MODULE_NOT_FOUND') {
-        console.log("📦 Missing dependencies detected!");
-        console.log("Please install the required packages:");
-        console.log("npm install playwright-core");
-        process.exit(1);
-    } else {
-        throw error;
-    }
-}
+const { chromium } = require('playwright-core');
+const axios = require('axios');
 
 const ANCHOR_API_KEY = process.env.ANCHOR_API_KEY;
 
 if (!ANCHOR_API_KEY) {
-    throw new Error("ANCHOR_API_KEY is not set, please run `export ANCHOR_API_KEY=<your-api-key>` and try again.");
+    console.error("❌ ANCHOR_API_KEY is not set. Run:");
+    console.error("export ANCHOR_API_KEY=<your-api-key>");
+    process.exit(1);
 }
 
-async function executeFormSubmission(connectionString = `wss://connect.anchorbrowser.io?apiKey=${ANCHOR_API_KEY}`) {
+async function createSession(ANCHOR_API_KEY) {
+    const url = "https://api.anchorbrowser.io/v1/sessions";
+    const payload = {
+        session: {
+            timeout: {
+                max_duration: 4,
+                idle_timeout: 2
+            }
+        }
+    };
+    const headers = {
+        "anchor-api-key": ANCHOR_API_KEY,
+        "Content-Type": "application/json"
+    };
+
+    try {
+        // Initialize session
+        const response = await axios.post(url, payload, { headers });
+        return response.data;
+    } catch (error) {
+        if (error.response) {
+            const { status, statusText, data } = error.response;
+            if (status === 401) {
+                console.error("❌ Authentication failed: Invalid or missing API key");
+            } else {
+                console.error(`❌ HTTP Error ${status}: ${statusText}`);
+                console.error("Response data:", data);
+            }
+        } else if (error.request) {
+            console.error("❌ Network error: No response from server");
+        } else {
+            console.error("❌ Error:", error.message);
+        }
+        process.exit(1);
+    }
+}
+
+
+async function executeFormSubmission(connectionString) {
     const browser = await chromium.connectOverCDP(connectionString);
     const context = browser.contexts()[0];
     const ai = context.serviceWorkers()[0];
@@ -44,9 +72,14 @@ async function executeFormSubmission(connectionString = `wss://connect.anchorbro
 
 (async () => {
     try {
-        const result = await executeFormSubmission();
+        const sessionData = await createSession(ANCHOR_API_KEY);
+        console.log(sessionData);
+        const connectionString = sessionData.data.cdp_url;
+        const result = await executeFormSubmission(connectionString);
         console.log(result);
+        process.exit(0);
     } catch (error) {
         console.error("Error:", error.message);
+        process.exit(1);
     }
 })(); 
