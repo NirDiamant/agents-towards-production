@@ -1,4 +1,0 @@
-graph TD
-    B["Anchor Browser Agent"] --> C["Start Session"]
-    C --> D["Data Entry: Fill & Submit Web Form"]
-    D --> E["Form Submission Result"]

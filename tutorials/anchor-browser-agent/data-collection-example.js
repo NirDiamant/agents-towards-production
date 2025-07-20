@@ -1,20 +1,13 @@
-let chromium, axios;
-
-try {
-    chromium = require('playwright-core').chromium;
-    axios = require('axios');
-} catch (error) {
-    if (error.code === 'MODULE_NOT_FOUND') {
-        console.log("📦 Missing dependencies detected!");
-        console.log("Please install the required packages:");
-        console.log("npm install playwright-core axios");
-        process.exit(1);
-    } else {
-        throw error;
-    }
-}
+const { chromium } = require('playwright-core');
+const axios = require('axios');
 
 const ANCHOR_API_KEY = process.env.ANCHOR_API_KEY;
+
+if (!ANCHOR_API_KEY) {
+    console.error("❌ ANCHOR_API_KEY is not set. Run:");
+    console.error("export ANCHOR_API_KEY=<your-api-key>");
+    process.exit(1);
+}
 
 async function dataCollectionExample(connectionString = `wss://connect.anchorbrowser.io?apiKey=${ANCHOR_API_KEY}`) {
     const browser = await chromium.connectOverCDP(connectionString);
@@ -26,25 +19,22 @@ async function dataCollectionExample(connectionString = `wss://connect.anchorbro
         "https://play.grafana.org/a/grafana-k8s-app/navigation/nodes?from=now-1h&to=now&refresh=1m",
         { waitUntil: 'domcontentloaded' }
     );
-    const result = await ai.evaluate('Collect the node names and their CPU average %, return in JSON array');
-    return result;
+    return await ai.evaluate('Collect the node names and their CPU average %, return in JSON array');
 }
 
-// Create a session with a profile
 async function createSessionWithProfile(profileName = "my-profile") {
     const url = "https://api.anchorbrowser.io/v1/sessions";
-
     const payload = {
-        "browser": {
-            "profile": {
-                "name": profileName,   // Replace "my-profile" to match your existing profile name
-                "persist": true
+        browser: {
+            profile: {
+                name: profileName,
+                persist: true
             }
         },
-        "session": {
-            "timeout": {                // Reduced timeouts for cost-effective learning
-                "max_duration": 4,
-                "idle_timeout": 2
+        session: {
+            timeout: {
+                max_duration: 4,
+                idle_timeout: 2
             }
         }
     };
@@ -54,47 +44,30 @@ async function createSessionWithProfile(profileName = "my-profile") {
     };
 
     try {
-        // Initialize session using profile "my-profile"
         const response = await axios.post(url, payload, { headers });
-
-        // Make sure to keep the cdpUrl for the next step
-        const sessionData = response.data;
-        console.log(sessionData);
-        return sessionData;
+        return response.data;
     } catch (error) {
         if (error.response) {
-            // The request was made and the server responded with a status code
-            // that falls out of the range of 2xx
-            if (error.response.status === 401) {
-                console.error("❌ Authentication failed (401): Invalid or missing API key");
-                console.log("Please check your ANCHOR_API_KEY environment variable");
-                process.exit(1);
+            const { status, statusText, data } = error.response;
+            if (status === 401) {
+                console.error("❌ Authentication failed: Invalid or missing API key");
             } else {
-                console.error(`❌ HTTP Error ${error.response.status}: ${error.response.statusText}`);
-                console.error("Response data:", error.response.data);
-                process.exit(1);
+                console.error(`❌ HTTP Error ${status}: ${statusText}`);
+                console.error("Response data:", data);
             }
         } else if (error.request) {
-            // The request was made but no response was received
-            console.error("❌ Network error: No response received from server");
-            process.exit(1);
+            console.error("❌ Network error: No response from server");
         } else {
-            // Something happened in setting up the request that triggered an Error
             console.error("❌ Error:", error.message);
-            process.exit(1);
         }
+        process.exit(1);
     }
 }
 
 async function dataCollectionExampleWithProfile(profileName = "my-profile") {
     const sessionData = await createSessionWithProfile(profileName);
     const connectionString = sessionData.data.cdp_url;
-    const result = await dataCollectionExample(connectionString);
-    return result;
-}
-
-if (!ANCHOR_API_KEY) {
-    throw new Error("ANCHOR_API_KEY is not set, please run `export ANCHOR_API_KEY=<your-api-key>` and try again.");
+    return await dataCollectionExample(connectionString);
 }
 
 (async () => {
@@ -107,8 +80,8 @@ if (!ANCHOR_API_KEY) {
         const result2 = await dataCollectionExampleWithProfile("my-profile");
         console.log(result2);
     } catch (error) {
-        console.error(error.message);
+        console.error("❌ Runtime error:", error.message);
         console.log("Please check the data-collection guide for more troubleshooting.");
         process.exit(1);
     }
-})(); 
+})();
