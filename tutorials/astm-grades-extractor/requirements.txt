@@ -1,0 +1,10 @@
+# ASTM Grades Extractor Dependencies
+
+# Tavily API for web content extraction
+tavily-python>=0.3.0
+
+# Google Generative AI (Gemini)
+google-generativeai>=0.8.0
+
+# Environment variable management
+python-dotenv>=1.0.0

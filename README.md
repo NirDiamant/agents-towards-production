@@ -350,6 +350,13 @@ All knowledge is delivered through runnable tutorials covering orchestration, me
       <a href="https://github.com/NirDiamant/agents-towards-production/tree/main/tutorials/agent-with-tavily-web-access"><img src="https://img.shields.io/badge/GitHub-View-blue" height="20"></a>
     </td>
   </tr>
+  <tr>
+    <td>ASTM Grades & Materials Extractor (Gemini Flash)</td>
+    <td>Extract structured grade and material data from 11,000+ ASTM standards using Google's Gemini Flash model for efficient batch processing. Demonstrates LLM-powered structured extraction from web content.</td>
+    <td align="center">
+      <a href="https://github.com/NirDiamant/agents-towards-production/tree/main/tutorials/astm-grades-extractor"><img src="https://img.shields.io/badge/GitHub-View-blue" height="20"></a>
+    </td>
+  </tr>
 </table>
 
 ### 🧠 Memory
