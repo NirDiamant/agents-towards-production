@@ -654,3 +654,5 @@ This project is licensed under a custom non-commercial license - see the [LICENS
 <p><i>Keywords: AI Agents, Production Deployment, LLM, Orchestration, Multi-agent Systems, Memory Systems, Monitoring, Security, Observability, Agent Frameworks, Infrastructure, Serverless, Enterprise AI, Tool Integration</i></p>
 
 </div>
+
+- [AgentMarket](https://agentmarket.cloud) - B2A marketplace for AI agents. 189 listings, 28M+ energy records, enterprise-ready API.
