@@ -643,6 +643,7 @@ Navigate to your target tutorial and set up the environment:
 
 ```bash
 # Example: Multi-tool agent orchestration
+- [skill-taxonomy](https://github.com/SeeleAI/skill-taxonomy) - Structured taxonomy for AI agent skills: discovery, classification and routing across multi-agent workflows.
 cd tutorials/agentic-applications-by-xpander.ai
 pip install -r meeting-recorder-agent/requirements.txt
 ```
