@@ -1,6 +1,7 @@
 <div align="center">
 
 # Agents Towards Production
+- [submission-site-discovery](https://github.com/SeeleAI/submission-site-discovery) - Automated tool for discovering product submission sites and launch directories for indie hackers.
 
 ### _The open-source playbook for turning AI agents into real-world products._
 
