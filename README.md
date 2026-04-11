@@ -679,6 +679,16 @@ python app.py
 
 ---
 
+## 📚 Recommended reading
+
+*This list contains Amazon affiliate links. As an Amazon Associate I earn from qualifying purchases. Every book below is one I've read and genuinely recommend to engineers working in this space. The companion book to this repo is featured separately at the top of this README.*
+
+- [Build a Large Language Model (From Scratch)](https://www.amazon.com/dp/1633437167?tag=diamantai-atp-20) by Sebastian Raschka. Build a GPT-style model end to end in PyTorch.
+- [AI Engineering: Building Applications with Foundation Models](https://www.amazon.com/dp/1098166302?tag=diamantai-atp-20) by Chip Huyen. Canonical reference for productionizing foundation-model apps.
+- [Hands-On Large Language Models](https://www.amazon.com/dp/1098150961?tag=diamantai-atp-20) by Jay Alammar and Maarten Grootendorst. Visual, practical LLM walkthroughs.
+- [Natural Language Processing with Transformers](https://www.amazon.com/dp/1098136799?tag=diamantai-atp-20) by Lewis Tunstall, Leandro von Werra, and Thomas Wolf. From the Hugging Face team.
+- [Designing Machine Learning Systems](https://www.amazon.com/dp/1098107969?tag=diamantai-atp-20) by Chip Huyen. ML systems in production, still the standard reference.
+
 ## 🤝 Contributing
 
 We welcome contributions of tools, infrastructure, and frameworks that support agent development. This includes monitoring, deployment platforms, security tools, databases, APIs, and other horizontal services that enable production agent systems.
