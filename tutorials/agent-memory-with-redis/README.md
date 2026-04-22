@@ -25,7 +25,7 @@ The goal of this tutorial is to empower you with a **horizontal concept** that y
 ## �� Requirements
 
 - **OpenAI API Key** (with billing enabled)
-- **Redis** optionally installed in Colab, or use [Redis Cloud](https://redis.io/try-free/?utm_source=nir&utm_medium=cpa&utm_campaign=2025-05-ai_in_production-influencer-nir&utm_content=sd-software_download-7013z000001WaRY)
+- **Redis** optionally installed in Colab, or use [Redis Cloud](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--agent-memory-with-redis--readme&click=redis-try-free&target=https%3A%2F%2Fredis.io%2Ftry-free%2F%3Futm_source%3Dnir%26utm_medium%3Dcpa%26utm_campaign%3D2025-05-ai_in_production-influencer-nir%26utm_content%3Dsd-software_download-7013z000001WaRY&text=Redis%20Cloud)
 
 ## 🎓 What You'll Build
 

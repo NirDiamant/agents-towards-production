@@ -2,7 +2,7 @@
 
 # Building AI Agents in Kotlin with Koog
 
-Build your first AI agent in [Kotlin](https://kotlinlang.org/?utm_source=github&utm_medium=influencers&utm_campaign=kotlin_nir_supporter_1) using JetBrains' Koog framework, progressing from a basic prompt-response agent through tool calling and structured output.
+Build your first AI agent in [Kotlin](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--kotlin-agent-with-koog--readme&click=kotlinlang&target=https%3A%2F%2Fkotlinlang.org%2F%3Futm_source%3Dgithub%26utm_medium%3Dinfluencers%26utm_campaign%3Dkotlin_nir_supporter_1&text=Kotlin) using JetBrains' Koog framework, progressing from a basic prompt-response agent through tool calling and structured output.
 
 ## What You'll Learn
 
@@ -38,7 +38,7 @@ The Gradle wrapper is included -- no need to install Gradle separately. The firs
 
 ## Requirements
 
-- **JDK 17+** installed ([Adoptium](https://adoptium.net/) or `brew install openjdk@17`)
+- **JDK 17+** installed ([Adoptium](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--kotlin-agent-with-koog--readme&click=adoptium&target=https%3A%2F%2Fadoptium.net%2F&text=Adoptium) or `brew install openjdk@17`)
 - **OpenAI API Key** (with billing enabled)
 
 ## What You'll Build

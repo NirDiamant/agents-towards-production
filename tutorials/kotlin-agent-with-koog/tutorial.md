@@ -2,7 +2,7 @@
 
 # Building AI Agents in Kotlin with Koog
 
-[Kotlin](https://kotlinlang.org/?utm_source=github&utm_medium=influencers&utm_campaign=kotlin_nir_supporter_1) powers a significant portion of backend infrastructure across the JVM ecosystem, yet most AI agent tutorials target Python exclusively. This tutorial bridges that gap using Koog, JetBrains' open-source framework for building LLM-powered agents in [Kotlin](https://kotlinlang.org/?utm_source=github&utm_medium=influencers&utm_campaign=kotlin_nir_supporter_1). By the end, you will have built an agent that can reason about tasks, call tools autonomously, and return typed Kotlin objects instead of raw text.
+[Kotlin](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--kotlin-agent-with-koog--tutorial&click=kotlinlang&target=https%3A%2F%2Fkotlinlang.org%2F%3Futm_source%3Dgithub%26utm_medium%3Dinfluencers%26utm_campaign%3Dkotlin_nir_supporter_1&text=Kotlin) powers a significant portion of backend infrastructure across the JVM ecosystem, yet most AI agent tutorials target Python exclusively. This tutorial bridges that gap using Koog, JetBrains' open-source framework for building LLM-powered agents in [Kotlin](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--kotlin-agent-with-koog--tutorial&click=kotlinlang&target=https%3A%2F%2Fkotlinlang.org%2F%3Futm_source%3Dgithub%26utm_medium%3Dinfluencers%26utm_campaign%3Dkotlin_nir_supporter_1&text=Kotlin). By the end, you will have built an agent that can reason about tasks, call tools autonomously, and return typed Kotlin objects instead of raw text.
 
 The tutorial progresses through three self-contained steps. You will start with a minimal agent that sends a single prompt to an LLM, then extend it with custom tools that the agent invokes on its own, and finally configure structured output so the LLM returns data as a Kotlin data class you can work with directly in code.
 
@@ -41,9 +41,9 @@ Before writing any agent code, you need two things:
 1. **JDK 17 or later.** Check with `java -version`. If you need to install one:
    - macOS: `brew install openjdk@17`
    - Ubuntu/Debian: `sudo apt install openjdk-17-jdk`
-   - Any platform: download from [Adoptium](https://adoptium.net/temurin/releases/)
+   - Any platform: download from [Adoptium](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--kotlin-agent-with-koog--tutorial&click=adoptium-releases&target=https%3A%2F%2Fadoptium.net%2Ftemurin%2Freleases%2F&text=Adoptium)
 
-2. **An OpenAI API key.** Get one at [platform.openai.com/api-keys](https://platform.openai.com/api-keys). Set it as an environment variable:
+2. **An OpenAI API key.** Get one at [platform.openai.com/api-keys](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--kotlin-agent-with-koog--tutorial&click=openai-platform&target=https%3A%2F%2Fplatform.openai.com%2Fapi-keys&text=platform.openai.com%2Fapi-keys). Set it as an environment variable:
 
 ```bash
 export OPENAI_API_KEY="sk-..."

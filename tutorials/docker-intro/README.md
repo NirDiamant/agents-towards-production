@@ -11,7 +11,7 @@ Docker is a core CI/CD tool and industry standard for containerization. It is wi
 If you're building AI agents for production, Docker isn't just a nice-to-have - it's essential. Modern AI agents rely on complex ecosystems of dependencies: specific Python versions, machine learning libraries, vector databases, API clients, and often GPU drivers. Without containerization, what works perfectly in your development environment can break spectacularly in production due to version conflicts, missing dependencies, or environmental differences. Docker ensures your AI agent runs consistently whether it's on your laptop, a cloud server, or a Kubernetes cluster. More importantly, as your agents scale from prototype to production, Docker enables seamless deployment, automatic scaling, and reliable updates - turning your experimental AI code into robust, production-ready applications that enterprises can depend on.
 
 
-> They say that a picture is worth a thousand words, and the following image from [reddit](https://www.reddit.com/r/ProgrammerHumor/comments/cw58z7/it_works_on_my_machine/) is self explanatory about the motivation behind Docker: 
+> They say that a picture is worth a thousand words, and the following image from [reddit](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--docker-intro--readme&click=reddit-it-works-on-my-machine&target=https%3A%2F%2Fwww.reddit.com%2Fr%2FProgrammerHumor%2Fcomments%2Fcw58z7%2Fit_works_on_my_machine%2F&text=reddit) is self explanatory about the motivation behind Docker: 
 
 
 <br>
@@ -46,7 +46,7 @@ To run the examples in this tutorial you will need:
  
 Docker was built to run on Linux OS, and therefore, it cannot run natively on other OSs such as macOS and Windows. The Docker Desktop provides the necessary virtual environment on which you can run Docker containers outside of Linux OS. In addition, it provides a GUI interface for managing the alocated resources and containers.
 
-To install Docker Desktop, go to [Docker website](https://www.docker.com/products/docker-desktop) and follow the instructions for your operating system: 
+To install Docker Desktop, go to [Docker website](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--docker-intro--readme&click=docker-docker-desktop&target=https%3A%2F%2Fwww.docker.com%2Fproducts%2Fdocker-desktop&text=Docker%20website) and follow the instructions for your operating system: 
 
 <br>
 <br /><figure>
@@ -68,7 +68,7 @@ Docker version 28.0.4, build b8034c0
 
 ### Setting Up Docker Hub Account
 
-Docker Hub is a public repository that allows you to store, share, and run your containers (as GitHub enables you to store and maintain code). To set up your Docker Hub account, go to [Docker Hub](https://hub.docker.com/) and follow the instructions.
+Docker Hub is a public repository that allows you to store, share, and run your containers (as GitHub enables you to store and maintain code). To set up your Docker Hub account, go to [Docker Hub](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--docker-intro--readme&click=docker&target=https%3A%2F%2Fhub.docker.com%2F&text=Docker%20Hub) and follow the instructions.
 
 
 <br>
@@ -141,9 +141,9 @@ Figure 2 demonstrates a general workflow with Docker and Git. We use Git and Git
 <br>
 <br />
 
-While this workflow provides a high level of reproducibility, it does not cover reproducibility issues you may encounter due to different hardware settings. There are different methods to address this issue, such as building a dedicated environment for each hardware architecture (more details are available [here](https://docs.docker.com/build/building/multi-platform/)).
+While this workflow provides a high level of reproducibility, it does not cover reproducibility issues you may encounter due to different hardware settings. There are different methods to address this issue, such as building a dedicated environment for each hardware architecture (more details are available [here](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--docker-intro--readme&click=docker-docs&target=https%3A%2F%2Fdocs.docker.com%2Fbuild%2Fbuilding%2Fmulti-platform%2F&text=here)).
 
-Note: Using a virtual environment is not an alternative to Docker. It actually works well together. While VE is not part of this tutorial, you can read more about the differences between VE and Docker in the following [article](https://medium.com/@rami.krispin/running-python-r-with-docker-vs-virtual-environment-4a62ed36900f).
+Note: Using a virtual environment is not an alternative to Docker. It actually works well together. While VE is not part of this tutorial, you can read more about the differences between VE and Docker in the following [article](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--docker-intro--readme&click=medium-running-python-r-with-docker-vs-virtual-environment-4a62ed36&target=https%3A%2F%2Fmedium.com%2F%40rami.krispin%2Frunning-python-r-with-docker-vs-virtual-environment-4a62ed36900f&text=article).
 
 
 ## Docker Workflow
@@ -203,7 +203,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends curl
 In a nutshell, we used the `FROM` command to specify the image we want to import from the Docker registry (don't forget to log in to the Docker registry service you are using before building the image!). The `LABEL` command is used to set labels or comments, and the `ENV` command is used to set environment variables. Last but not least, the `RUN` command is used to run a command on the command line, in this case, to install the `curl` library.
 
 Let's now review the Dockerfile core commands:
-- `FROM` - Defines the base image to use for the image's build. In most cases, unless you are building the image from scratch, you will use some base image with some pre-installed OS and some dependencies. For example, in this tutorial, we will import as our base image the official [Python image](https://hub.docker.com/_/python)
+- `FROM` - Defines the base image to use for the image's build. In most cases, unless you are building the image from scratch, you will use some base image with some pre-installed OS and some dependencies. For example, in this tutorial, we will import as our base image the official [Python image](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--docker-intro--readme&click=docker-python&target=https%3A%2F%2Fhub.docker.com%2F_%2Fpython&text=Python%20image)
 - `LABEL` - Enables to add information about the image to the image's metadata, such as authors, maintainers, license, etc.
 - `ENV` - Uses to set environment variables
 - `ARG` - Enables to set parameters during the build time
@@ -296,7 +296,7 @@ The build process of Docker's images is based on layers. Depending on the contex
 <br>
 <br />
 
-The `docker inspect` command returns the image metadata details in a JSON format. That includes the environment variables, labels, layers and general metadata. In the following example, we will use [jq](https://jqlang.github.io/jq/) to extract the layers' information from the metadata JSON file:
+The `docker inspect` command returns the image metadata details in a JSON format. That includes the environment variables, labels, layers and general metadata. In the following example, we will use [jq](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--docker-intro--readme&click=github-jq&target=https%3A%2F%2Fjqlang.github.io%2Fjq%2F&text=jq) to extract the layers' information from the metadata JSON file:
 
 ``` shell
 > docker inspect rkrispin/vscode-python:ex1 | jq '.[] | .RootFS'
@@ -681,4 +681,4 @@ In this tutorial, we reviewed the foundation of Docker. Docker solves a core pro
 This is the tip of the iceberg of what Docker does, and hopefully, it gives you an idea of what you can do with Docker and how to start with it.
 
 ---
-This tutorial was written by [Rami Krispin](https://www.linkedin.com/in/rami-krispin/)
+This tutorial was written by [Rami Krispin](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--docker-intro--readme&click=linkedin-rami-krispin&target=https%3A%2F%2Fwww.linkedin.com%2Fin%2Frami-krispin%2F&text=Rami%20Krispin)

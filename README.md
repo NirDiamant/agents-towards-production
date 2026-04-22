@@ -556,8 +556,8 @@ All knowledge is delivered through runnable tutorials covering orchestration, me
     </td>
   </tr>
   <tr>
-    <td>Building AI Agents in <a href="https://kotlinlang.org/?utm_source=github&utm_medium=influencers&utm_campaign=kotlin_nir_supporter_1">Kotlin</a> with Koog <img src="https://img.shields.io/badge/NEW-brightgreen" height="16"></td>
-    <td>Build your first AI agent in <a href="https://kotlinlang.org/?utm_source=github&utm_medium=influencers&utm_campaign=kotlin_nir_supporter_1">Kotlin</a> using JetBrains' Koog framework. Step-by-step from hello world to tool calling and structured output in under 30 minutes.</td>
+    <td>Building AI Agents in <a href="https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=agents-towards-production--readme&click=kotlinlang&target=https%3A%2F%2Fkotlinlang.org%2F%3Futm_source%3Dgithub%26utm_medium%3Dinfluencers%26utm_campaign%3Dkotlin_nir_supporter_1&text=Kotlin">Kotlin</a> with Koog <img src="https://img.shields.io/badge/NEW-brightgreen" height="16"></td>
+    <td>Build your first AI agent in <a href="https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=agents-towards-production--readme&click=kotlinlang&target=https%3A%2F%2Fkotlinlang.org%2F%3Futm_source%3Dgithub%26utm_medium%3Dinfluencers%26utm_campaign%3Dkotlin_nir_supporter_1&text=Kotlin">Kotlin</a> using JetBrains' Koog framework. Step-by-step from hello world to tool calling and structured output in under 30 minutes.</td>
     <td align="center">
       <a href="https://github.com/NirDiamant/agents-towards-production/tree/main/tutorials/kotlin-agent-with-koog"><img src="https://img.shields.io/badge/GitHub-View-blue" height="20"></a>
     </td>
@@ -683,11 +683,11 @@ python app.py
 
 *This list contains Amazon affiliate links. As an Amazon Associate I earn from qualifying purchases. Every book below is one I've read and genuinely recommend to engineers working in this space. The companion book to this repo is featured separately at the top of this README.*
 
-- [Build a Large Language Model (From Scratch)](https://www.amazon.com/dp/1633437167?tag=diamantai-atp-20) by Sebastian Raschka. Build a GPT-style model end to end in PyTorch.
-- [AI Engineering: Building Applications with Foundation Models](https://www.amazon.com/dp/1098166302?tag=diamantai-atp-20) by Chip Huyen. Canonical reference for productionizing foundation-model apps.
-- [Hands-On Large Language Models](https://www.amazon.com/dp/1098150961?tag=diamantai-atp-20) by Jay Alammar and Maarten Grootendorst. Visual, practical LLM walkthroughs.
-- [Natural Language Processing with Transformers](https://www.amazon.com/dp/1098136799?tag=diamantai-atp-20) by Lewis Tunstall, Leandro von Werra, and Thomas Wolf. From the Hugging Face team.
-- [Designing Machine Learning Systems](https://www.amazon.com/dp/1098107969?tag=diamantai-atp-20) by Chip Huyen. ML systems in production, still the standard reference.
+- [Build a Large Language Model (From Scratch)](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=agents-towards-production--readme&click=amazon-product&target=https%3A%2F%2Fwww.amazon.com%2Fdp%2F1633437167%3Ftag%3Ddiamantai-atp-20&text=Build%20a%20Large%20Language%20Model%20%28From%20Scratch%29) by Sebastian Raschka. Build a GPT-style model end to end in PyTorch.
+- [AI Engineering: Building Applications with Foundation Models](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=agents-towards-production--readme&click=amazon-product&target=https%3A%2F%2Fwww.amazon.com%2Fdp%2F1098166302%3Ftag%3Ddiamantai-atp-20&text=AI%20Engineering%3A%20Building%20Applications%20with%20Foundation%20Models) by Chip Huyen. Canonical reference for productionizing foundation-model apps.
+- [Hands-On Large Language Models](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=agents-towards-production--readme&click=amazon-product&target=https%3A%2F%2Fwww.amazon.com%2Fdp%2F1098150961%3Ftag%3Ddiamantai-atp-20&text=Hands-On%20Large%20Language%20Models) by Jay Alammar and Maarten Grootendorst. Visual, practical LLM walkthroughs.
+- [Natural Language Processing with Transformers](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=agents-towards-production--readme&click=amazon-product&target=https%3A%2F%2Fwww.amazon.com%2Fdp%2F1098136799%3Ftag%3Ddiamantai-atp-20&text=Natural%20Language%20Processing%20with%20Transformers) by Lewis Tunstall, Leandro von Werra, and Thomas Wolf. From the Hugging Face team.
+- [Designing Machine Learning Systems](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=agents-towards-production--readme&click=amazon-product&target=https%3A%2F%2Fwww.amazon.com%2Fdp%2F1098107969%3Ftag%3Ddiamantai-atp-20&text=Designing%20Machine%20Learning%20Systems) by Chip Huyen. ML systems in production, still the standard reference.
 
 ## 🤝 Contributing
 

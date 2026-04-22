@@ -4,20 +4,20 @@
 
 ## Overview
 
-This repository demonstrates how to deploy an AI agent system on [RunPod](https://get.runpod.io/nirdiamant)'s serverless infrastructure. The sample application creates an API endpoint that generates blog posts on any topic through an AI agent workflow.
+This repository demonstrates how to deploy an AI agent system on [RunPod](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--runpod-gpu-deploy--crew-ai-ollama-runpod-tutorial--readme&click=runpod-nirdiamant&target=https%3A%2F%2Fget.runpod.io%2Fnirdiamant&text=RunPod)'s serverless infrastructure. The sample application creates an API endpoint that generates blog posts on any topic through an AI agent workflow.
 
 Key components:
 - **CrewAI**: Framework for orchestrating role-playing AI agents
 - **Ollama**: Tool for running open-source LLMs locally
 - **RunPod**: Serverless GPU infrastructure for AI deployment
 
-*Referenced from: [RunPod Worker Template](https://github.com/runpod-workers/worker-template)*
+*Referenced from: [RunPod Worker Template](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--runpod-gpu-deploy--crew-ai-ollama-runpod-tutorial--readme&click=github-worker-template&target=https%3A%2F%2Fgithub.com%2Frunpod-workers%2Fworker-template&text=RunPod%20Worker%20Template)*
 
 ## RunPod Template
 
 Get started immediately using our pre-configured RunPod template:
 
-[<img src="https://img.shields.io/badge/RunPod-Deploy%20Now-blue?style=for-the-badge&logo=none" alt="Deploy on RunPod" width="200"/>](https://get.runpod.io/nirdiamant)
+[<img src="https://img.shields.io/badge/RunPod-Deploy%20Now-blue?style=for-the-badge&logo=none" alt="Deploy on RunPod" width="200"/>](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--runpod-gpu-deploy--crew-ai-ollama-runpod-tutorial--readme&click=runpod-nirdiamant&target=https%3A%2F%2Fget.runpod.io%2Fnirdiamant&text=%3Cimg%20src%3D%22https%3A%2F%2Fimg.shields.io%2Fbadge%2FRunPod-Deploy%2520Now-blue%3Fstyle%3Dfor-the-badge%26logo%3Dnone%22%20alt%3D%22Deploy%20on%20RunPod%22%20width%3D%22200%22%2F%3E)
 
 ## How It Works
 
@@ -202,7 +202,7 @@ This template can be extended in several ways:
 
 ## Acknowledgements
 
-- [CrewAI](https://github.com/crewAIInc/crewAI)
-- [Ollama](https://github.com/ollama/ollama)
-- [RunPod](https://get.runpod.io/nirdiamant)
-- [RunPod Worker Template](https://github.com/runpod-workers/worker-template)
+- [CrewAI](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--runpod-gpu-deploy--crew-ai-ollama-runpod-tutorial--readme&click=github-crewai&target=https%3A%2F%2Fgithub.com%2FcrewAIInc%2FcrewAI&text=CrewAI)
+- [Ollama](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--runpod-gpu-deploy--crew-ai-ollama-runpod-tutorial--readme&click=github-ollama&target=https%3A%2F%2Fgithub.com%2Follama%2Follama&text=Ollama)
+- [RunPod](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--runpod-gpu-deploy--crew-ai-ollama-runpod-tutorial--readme&click=runpod-nirdiamant&target=https%3A%2F%2Fget.runpod.io%2Fnirdiamant&text=RunPod)
+- [RunPod Worker Template](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--runpod-gpu-deploy--crew-ai-ollama-runpod-tutorial--readme&click=github-worker-template&target=https%3A%2F%2Fgithub.com%2Frunpod-workers%2Fworker-template&text=RunPod%20Worker%20Template)

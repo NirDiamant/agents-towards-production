@@ -58,7 +58,7 @@ The serverless approach offers several advantages:
 ## Signing up for RunPod
 
 ### Sign Up Page
-Visit the [RunPod Sign Up Page](https://get.runpod.io/nirdiamant) to create your account.
+Visit the [RunPod Sign Up Page](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--runpod-gpu-deploy--readme&click=runpod-nirdiamant&target=https%3A%2F%2Fget.runpod.io%2Fnirdiamant&text=RunPod%20Sign%20Up%20Page) to create your account.
 
 ## Preparing Application for RunPod
 

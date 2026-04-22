@@ -40,4 +40,4 @@ Comprehensive security for AI agent tools with input validation and access contr
 4. **Configure**: Run `llamafirewall configure` to set up models and API keys
 
 ## Authors
-Created by [Matan Kotick](https://www.linkedin.com/in/matan-kotick-664735252) and [Amit Ziv](https://www.linkedin.com/in/amit-ziv-49690b120).
+Created by [Matan Kotick](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--agent-security-with-llamafirewall--readme&click=linkedin-matan-kotick-664735252&target=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmatan-kotick-664735252&text=Matan%20Kotick) and [Amit Ziv](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--agent-security-with-llamafirewall--readme&click=linkedin-amit-ziv-49690b120&target=https%3A%2F%2Fwww.linkedin.com%2Fin%2Famit-ziv-49690b120&text=Amit%20Ziv).
