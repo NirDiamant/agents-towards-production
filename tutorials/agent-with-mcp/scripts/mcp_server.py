@@ -38,16 +38,17 @@ async def get_crypto_price(crypto_id: str, currency: str = "usd") -> str:
             response.raise_for_status()
 
         data = response.json()
-        if (
-            normalized_crypto_id not in data
-            or normalized_currency not in data[normalized_crypto_id]
-        ):
+        if not isinstance(data, dict):
+            return "CoinGecko returned an unexpected response format."
+
+        coin_data = data.get(normalized_crypto_id)
+        if not isinstance(coin_data, dict) or normalized_currency not in coin_data:
             return (
                 f"No price found for '{crypto_id}' in '{currency}'. "
                 "Please check the CoinGecko ID and currency."
             )
 
-        price = data[normalized_crypto_id][normalized_currency]
+        price = coin_data[normalized_currency]
         return f"The current price of {normalized_crypto_id} is {price} {normalized_currency.upper()}."
     except json.JSONDecodeError:
         if response is None:
