@@ -4,6 +4,8 @@ The server exposes a CoinGecko-backed tool that Claude Desktop or another MCP
 client can call to look up the current price of a cryptocurrency.
 """
 
+import json
+
 import httpx
 from mcp.server.fastmcp import FastMCP
 
@@ -20,7 +22,11 @@ async def get_crypto_price(crypto_id: str, currency: str = "usd") -> str:
         crypto_id: CoinGecko cryptocurrency ID, such as "bitcoin" or "ethereum".
         currency: Fiat or crypto quote currency, such as "usd".
     """
-    params = {"ids": crypto_id, "vs_currencies": currency}
+    normalized_crypto_id = crypto_id.strip().lower()
+    normalized_currency = currency.strip().lower()
+    params = {"ids": normalized_crypto_id, "vs_currencies": normalized_currency}
+
+    response: httpx.Response | None = None
 
     try:
         async with httpx.AsyncClient() as client:
@@ -32,14 +38,25 @@ async def get_crypto_price(crypto_id: str, currency: str = "usd") -> str:
             response.raise_for_status()
 
         data = response.json()
-        if crypto_id not in data or currency not in data[crypto_id]:
+        if (
+            normalized_crypto_id not in data
+            or normalized_currency not in data[normalized_crypto_id]
+        ):
             return (
                 f"No price found for '{crypto_id}' in '{currency}'. "
                 "Please check the CoinGecko ID and currency."
             )
 
-        price = data[crypto_id][currency]
-        return f"The current price of {crypto_id} is {price} {currency.upper()}."
+        price = data[normalized_crypto_id][normalized_currency]
+        return f"The current price of {normalized_crypto_id} is {price} {normalized_currency.upper()}."
+    except json.JSONDecodeError:
+        if response is None:
+            return "CoinGecko returned non-JSON data before a response was available."
+        snippet = response.text[:200]
+        return (
+            f"CoinGecko returned non-JSON data with status {response.status_code}: "
+            f"{snippet}"
+        )
     except httpx.HTTPStatusError as exc:
         return f"CoinGecko API error: {exc.response.status_code} - {exc.response.text}"
     except httpx.HTTPError as exc:
