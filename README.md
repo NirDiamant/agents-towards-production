@@ -558,10 +558,10 @@ All knowledge is delivered through runnable tutorials covering orchestration, me
     </td>
   </tr>
   <tr>
-    <td>Multi-Agent Systems with <a href="https://ag2.ai/?utm_source=agents-towards-production&utm_medium=github&utm_campaign=tutorial">AG2</a> <img src="https://img.shields.io/badge/NEW-brightgreen" height="16"></td>
+    <td>Multi-Agent Systems with <a href="https://ag2.ai/?utm_source=agents-towards-production&utm_medium=github&utm_campaign=tutorial">AG2</a> <img src="https://img.shields.io/badge/NEW-brightgreen" alt="New tutorial" height="16"></td>
     <td>Build production-ready multi-agent applications with AG2 (formerly AutoGen). Learn conversation-centric design, dual tool registration, GroupChat orchestration with automatic speaker selection, and production safety patterns.</td>
     <td align="center">
-      <a href="tutorials/ag2-multi-agent"><img src="https://img.shields.io/badge/GitHub-View-blue" height="20"></a>
+      <a href="tutorials/ag2-multi-agent"><img src="https://img.shields.io/badge/GitHub-View-blue" alt="View on GitHub" height="20"></a>
     </td>
   </tr>
 </table>
