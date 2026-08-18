@@ -33,7 +33,6 @@ def test_stream_endpoint():
     """Test the streaming agent endpoint"""
     with client.stream("POST", "/agent/stream", json={"query": "Test query"}) as response:
         assert response.status_code == 200
-        assert response.headers["content-type"] == "text/event-stream"
-        # Check that we receive at least some content
-        content = response.iter_content().read()
-        assert len(content) > 0 
+        assert response.headers["content-type"].startswith("text/event-stream")
+        content = "".join(response.iter_text())
+        assert 'data: {"token":' in content
