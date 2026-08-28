@@ -3,3 +3,4 @@ python-dotenv>=1.0.0
 aiohttp>=3.8.0
 ipython>=7.30.1
 openai>=1.0.0
+pandas>=2.0.0
