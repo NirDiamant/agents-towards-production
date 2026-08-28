@@ -1,4 +1,5 @@
-requests>=2.31.0
-langchain>=0.2.0
-langchain-openai>=0.1.0
-langgraph>=0.1.0
+requests>=2.31.0,<3.0.0
+langchain>=1.0.0,<2.0.0
+langchain-core>=1.0.0,<2.0.0
+langchain-openai>=1.0.0,<2.0.0
+langgraph>=1.0.0,<2.0.0
