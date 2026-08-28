@@ -506,6 +506,13 @@ All knowledge is delivered through runnable tutorials covering orchestration, me
       <a href="tutorials/agent-security-apex"><img src="https://img.shields.io/badge/GitHub-View-blue" height="20"></a>
     </td>
   </tr>
+  <tr>
+    <td>PII Sanitization for Production Agents</td>
+    <td>Compare regex, local NLP, and hosted-API approaches to stripping PII before it reaches your LLM, with the privacy trade-offs of each made explicit. LangChain and LangGraph integration patterns included.</td>
+    <td align="center">
+      <a href="https://github.com/NirDiamant/agents-towards-production/tree/main/tutorials/pii-sanitization-for-production-agents"><img src="https://img.shields.io/badge/GitHub-View-blue" height="20"></a>
+    </td>
+  </tr>
 </table>
 
 ### 👥 Multi-agent Coordination
