@@ -310,22 +310,31 @@ _Join over 50,000 AI enthusiasts getting unique cutting-edge insights and free t
 
 <table>
 <tr>
-<td width="33%" align="center" valign="top">
-  <a href="https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&amp;click=youtube-readme-ctx&amp;target=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Da7bteK6c3Ng&amp;retarget=0&amp;text=youtube-readme-ctx">
+<td width="50%" align="center" valign="top">
+  <a href="https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&amp;click=youtube-readme-loop&amp;target=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DFN1n_NVD9KM%26list%3DPLBrpE2PttR2k&amp;retarget=0&amp;text=youtube-readme-loop">
+    <img src="https://img.youtube.com/vi/FN1n_NVD9KM/mqdefault.jpg" width="100%" alt="">
+    <br><b>AI Agents Are Just While Loops. That's the Scary Part.</b>
+  </a><br>
+  <sub>the whole agent is a text file re-read in a loop, and it can trap itself</sub>
+</td>
+<td width="50%" align="center" valign="top">
+  <a href="https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&amp;click=youtube-readme-ctx&amp;target=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Da7bteK6c3Ng%26list%3DPLBrpE2PttR2k&amp;retarget=0&amp;text=youtube-readme-ctx">
     <img src="https://img.youtube.com/vi/a7bteK6c3Ng/mqdefault.jpg" width="100%" alt="">
     <br><b>Context Is the New Code</b>
   </a><br>
   <sub>the shift from writing the code to shaping what the model sees</sub>
 </td>
-<td width="33%" align="center" valign="top">
-  <a href="https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&amp;click=youtube-readme-cc&amp;target=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D0fU8GdipOjc&amp;retarget=0&amp;text=youtube-readme-cc">
+</tr>
+<tr>
+<td width="50%" align="center" valign="top">
+  <a href="https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&amp;click=youtube-readme-cc&amp;target=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D0fU8GdipOjc%26list%3DPLBrpE2PttR2k&amp;retarget=0&amp;text=youtube-readme-cc">
     <img src="https://img.youtube.com/vi/0fU8GdipOjc/mqdefault.jpg" width="100%" alt="">
     <br><b>Stop Thinking Claude Code Is Magic. Here's How It Works</b>
   </a><br>
   <sub>what the agent loop is actually doing on every turn</sub>
 </td>
-<td width="33%" align="center" valign="top">
-  <a href="https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&amp;click=youtube-readme-llm&amp;target=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DtKXvKKVQ1Dc&amp;retarget=0&amp;text=youtube-readme-llm">
+<td width="50%" align="center" valign="top">
+  <a href="https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&amp;click=youtube-readme-llm&amp;target=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DtKXvKKVQ1Dc%26list%3DPLBrpE2PttR2k&amp;retarget=0&amp;text=youtube-readme-llm">
     <img src="https://img.youtube.com/vi/tKXvKKVQ1Dc/mqdefault.jpg" width="100%" alt="">
     <br><b>How LLMs Actually Work (and Why AI Makes Things Up)</b>
   </a><br>
