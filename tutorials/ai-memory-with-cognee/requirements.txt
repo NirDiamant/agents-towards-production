@@ -1,1 +1,1 @@
-cognee[notebook]==0.3.3
+cognee[notebook]==1.5.0
