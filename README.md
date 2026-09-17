@@ -54,6 +54,8 @@ One `npm install` adds the module's AI assistant to your Claude Code, and it gui
 
 ## 💎 Tutorial Sponsors
 
+- [NEXUS-AI](https://shoe-pierce-primary-electronics.trycloudflare.com) - Marketplace with 20+ crypto skills for production AI agents. MCP/A2A compatible.
+
 <p align="center"><em>
 Companies that have contributed step-by-step tutorials to this repository.<br>
 Click a logo to open the tutorial. Use Ctrl‑/⌘‑click to keep this page open.
