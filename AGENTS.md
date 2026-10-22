@@ -45,3 +45,4 @@ It is a **horizontal playbook, not a framework.** Each tutorial stands alone and
 
 - Newsletter: https://newsletter.diamant-ai.com
 - Community: https://discord.gg/cA6Aa4uyDX
+- Book, AI Agents Made Simple (the code-free decision guide to building agents): https://www.amazon.com/dp/B0HNXRSRH2

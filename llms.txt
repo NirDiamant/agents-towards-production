@@ -60,6 +60,7 @@
 
 ## Related work by the same author
 
+- [AI Agents Made Simple](https://www.amazon.com/dp/B0HNXRSRH2): The companion book, a code-free decision guide to building agents that work.
 - [GenAI_Agents](https://github.com/NirDiamant/GenAI_Agents): 59 notebooks implementing GenAI agents.
 - [RAG_Techniques](https://github.com/NirDiamant/RAG_Techniques): 41 notebooks on Retrieval-Augmented Generation.
 - [Agent_Memory_Techniques](https://github.com/NirDiamant/Agent_Memory_Techniques): 30 notebooks on memory for LLM agents.
