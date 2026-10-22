@@ -19,21 +19,15 @@
 
 ---
 
-<h2 align="center">🎓 From prototype to production, as a method</h2>
+<h2 align="center">📖 The companion book</h2>
 
 <div align="center">
 
-**[Prompt to Production](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=course-free-module-cta&target=https%3A%2F%2Fwww.diamant-ai.com%2Fcourses%3Futm_source%3Dgithub%26utm_medium%3Dreadme%26utm_campaign%3Dagents-towards-production&retarget=0&text=course-free-module-cta)** - my full course on building software with AI the way professionals do: the methods and paradigms behind reliable, efficient, modular production systems, taught systematically. 17 modules, each pairing a video lecture with a hands-on lab, from your first structured prompt to a working production system.
+<a href="https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&amp;click=book-card-agents-image&amp;target=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0HNXRSRH2&amp;retarget=0&amp;text=book-card-agents-image"><img src="images/ai-agents-made-simple-cover.jpg" alt="AI Agents Made Simple: A Decision Guide to Building AI Agents That Work" width="240"></a>
 
-**$199 · one payment · lifetime access · 30-day refund, no questions**<br>
-<sub>$99 in India, Pakistan, Bangladesh, Sri Lanka and Nepal, applied at checkout.</sub>
+**AI Agents Made Simple** - the decision guide to building agents that work: 28 chapters on what each pattern does, what breaks, what it costs, and when it is overkill. No code.
 
-> "I went through the module and I like that you explicitly separate advisory rules from rules that become executable through hooks, tests or CI."<br>
-> **Theo Valmis, Mneme HQ**
-
-### 👉 [**Get the course: $199**](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=course-buy-top&target=https%3A%2F%2Fdiamant-ai.com%2Fbuy%3Futm_source%3Dgithub%26utm_medium%3Dreadme%26utm_campaign%3Dagents-towards-production%26utm_content%3Dreadme-buy&retarget=0&text=course-buy-top)
-
-Not ready? [Try the first module free, no signup](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=course-free-module-direct&target=https%3A%2F%2Fp2p-course.diamant-ai.com%2Flectures%2F00-present%3Futm_source%3Dgithub%26utm_medium%3Dreadme%26utm_campaign%3Dagents-towards-production-direct&retarget=0&text=course-free-module-direct) · Expensing it? [The note for your manager](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=course-expense&target=https%3A%2F%2Fp2p-course.diamant-ai.com%2Fexpense%3Futm_source%3Dgithub%26utm_medium%3Dreadme%26utm_campaign%3Dagents-towards-production%26utm_content%3Dreadme-expense&retarget=0&text=course-expense)
+**[Get it on Amazon →](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=book-card-agents-cta&target=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0HNXRSRH2&retarget=0&text=book-card-agents-cta)**
 
 </div>
 
@@ -305,7 +299,7 @@ Click a logo to visit their website.
 [![Subscribe to DiamantAI Newsletter](assets/repos_images/subscribe-button.svg)](https://newsletter.diamant-ai.com/?r=336pe4&utm_campaign=pub-share-checklist)
 
 _Join over 50,000 AI enthusiasts getting unique cutting-edge insights and free tutorials!_  
-**_Plus, subscribers get exclusive early access and special 33% discounts to my book and upcoming courses!_**
+**_Plus, subscribers get exclusive early access and special 33% discounts on my books!_**
 
 [![DiamantAI's newsletter](assets/repos_images/substack_image.png)](https://newsletter.diamant-ai.com/?r=336pe4&utm_campaign=pub-share-checklist)
 
@@ -772,7 +766,11 @@ python app.py
 
 ## 📚 More from the same author
 
-**[Prompt Engineering: Master the Art of AI Interaction](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=book-buy-pe&target=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0DZ85RPB5%3Ftag%3Ddiamantai-atp-20&retarget=0&text=book-buy-pe)** - the prompting foundation, 22 hands-on techniques.
+**[Agent Memory Made Simple](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=book-footer-am&target=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0HCRMGHCM&retarget=0&text=book-footer-am)** - the visual guide to memory for AI agents: 30 techniques, zero code required.
+
+**[RAG Made Simple](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=book-footer-rag&target=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0GWDH8JJL%3Fmaas%3Dmaas_adg_api_580351185840460851_static_9_573%26ref_%3Daa_maas%26tag%3Dmaas%26aa_campaignid%3Drag-en%26aa_adgroupid%3Dgithub-readme%26aa_creativeid%3Dbook-section&retarget=0&text=book-footer-rag)** - go deeper on RAG (Amazon bestseller, ⭐ 4.6) · [read Chapter 1 free](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=free-chapter&target=https%3A%2F%2Fdiamant-ai.com%2Frag-made-simple%2Fchapter-1&retarget=0&text=free-chapter).
+
+**[Prompt Engineering: Master the Art of AI Interaction](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=book-footer-pe&target=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0DZ85RPB5%3Ftag%3Ddiamantai-atp-20&retarget=0&text=book-footer-pe)** - the prompting foundation, 22 hands-on techniques.
 
 *Run a course, newsletter, or dev community? You can [earn 25% recommending RAG Made Simple](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=affiliate-signup&target=https%3A%2F%2Fnirdiamant.gumroad.com%2Faffiliates&retarget=0&text=affiliate-signup) to your audience.*
 
@@ -801,8 +799,6 @@ This project is licensed under a custom non-commercial license - see the [LICENS
 ---
 
 <div align="center">
-
-📖 *Go deeper on RAG: **[RAG Made Simple](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=book-buy-amazon-rag-cta&target=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0GWDH8JJL%3Fmaas%3Dmaas_adg_api_580351185840460851_static_9_573%26ref_%3Daa_maas%26tag%3Dmaas%26aa_campaignid%3Drag-en%26aa_adgroupid%3Dgithub-readme%26aa_creativeid%3Dbook-section&retarget=0&text=book-buy-amazon-rag-cta)** by the author of this repo (Amazon bestseller, ⭐ 4.6) · [read Chapter 1 free](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=free-chapter&target=https%3A%2F%2Fdiamant-ai.com%2Frag-made-simple%2Fchapter-1&retarget=0&text=free-chapter).*
 
 ### ⭐️ If you find this repository helpful, please consider giving it a star!
 

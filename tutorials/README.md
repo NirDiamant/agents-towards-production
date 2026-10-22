@@ -44,6 +44,6 @@ The engineering ideas behind these tutorials, explained end to end.
 
 <div align="center">
 
-**[← Back to the main README](../README.md)** for the full technique table, the book and the course.
+**[← Back to the main README](../README.md)** for the full technique table and the books.
 
 </div>

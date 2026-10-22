@@ -63,6 +63,5 @@
 - [GenAI_Agents](https://github.com/NirDiamant/GenAI_Agents): 59 notebooks implementing GenAI agents.
 - [RAG_Techniques](https://github.com/NirDiamant/RAG_Techniques): 41 notebooks on Retrieval-Augmented Generation.
 - [Agent_Memory_Techniques](https://github.com/NirDiamant/Agent_Memory_Techniques): 30 notebooks on memory for LLM agents.
-- [Course, Prompt to Production](https://diamant-ai.com/courses): Building software with AI, taught systematically.
 - [Newsletter](https://newsletter.diamant-ai.com): Weekly deep dives on GenAI engineering.
 - [Community Discord](https://discord.gg/cA6Aa4uyDX): Questions, contributions and discussion.
