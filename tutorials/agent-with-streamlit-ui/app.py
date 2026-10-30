@@ -64,7 +64,7 @@ def generate_response(user_prompt, file_content=None):
     
     # Use OpenAI's chat completion endpoint to get a chat-based response
     response = client.chat.completions.create(
-        model="gpt-4o",  # The AI model to use
+        model="gpt-5.4",  # The AI model to use
         messages=messages  # The conversation context
     )
     # Extract the assistant's message from the response

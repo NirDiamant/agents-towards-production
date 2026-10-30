@@ -29,7 +29,7 @@
 - [Durable RAG Ingestion with Inngest](https://github.com/NirDiamant/agents-towards-production/tree/main/tutorials/durable-rag-ingestion-inngest): Ingestion pipelines that survive failures and retries.
 - [Agent with Tavily Web Access](https://github.com/NirDiamant/agents-towards-production/tree/main/tutorials/agent-with-tavily-web-access): Giving an agent live web search.
 - [Agent with Bright Data](https://github.com/NirDiamant/agents-towards-production/tree/main/tutorials/agent-with-brightdata): Large-scale web data collection for agents.
-- [Agent File Conversion with Hushvert](https://github.com/NirDiamant/agents-towards-production/tree/main/tutorials/agent-file-conversion-with-hushvert): Converting user file formats inside an agent pipeline.
+- [Agent File Conversion with Hushvert](https://github.com/NirDiamant/agents-towards-production/tree/main/tutorials/agent-file-conversion-with-hushvert): Converting user file formats inside an agent pipeline (archived for reference: the hosted API it calls was retired on 12 Oct 2026, so its server-lane code no longer runs).
 
 ## Security and Guardrails
 

@@ -1,0 +1,84 @@
+name: Notebook smoke test
+
+# Syntax-only check: every notebook's code cells and every .py file must compile.
+# Nothing is executed and no API keys are used.
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install nbformat
+        run: pip install nbformat
+
+      - name: Compile notebook code cells
+        run: |
+          python - <<'PY'
+          import ast
+          import pathlib
+          import re
+          import sys
+
+          import nbformat
+
+          # IPython-only lines (magics, shell escapes, `x = !cmd`) are not Python;
+          # each becomes `pass` at the same indent so the block structure stays valid.
+          ipython_line = re.compile(r"^(\s*)([%!]|[A-Za-z_][\w, ]*=\s*!)")
+          flags = ast.PyCF_ALLOW_TOP_LEVEL_AWAIT  # Jupyter allows top-level await
+          failures = 0
+          notebooks = sorted(p for p in pathlib.Path(".").rglob("*.ipynb") if ".git" not in p.parts)
+          for path in notebooks:
+              nb = nbformat.read(path, as_version=4)
+              lines, origin = [], []
+              for index, cell in enumerate(nb.cells):
+                  if cell.cell_type != "code":
+                      continue
+                  source = cell.source
+                  if source.lstrip().startswith("%%"):
+                      continue  # cell magic: the body is not Python (%%bash, %%writefile, ...)
+                  for line in source.splitlines():
+                      match = ipython_line.match(line)
+                      lines.append(match.group(1) + "pass" if match else line)
+                      origin.append(index)
+                  lines.append("")
+                  origin.append(index)
+              try:
+                  compile("\n".join(lines), str(path), "exec", flags=flags)
+              except SyntaxError as err:
+                  failures += 1
+                  cell = origin[err.lineno - 1] if err.lineno and err.lineno <= len(origin) else "?"
+                  print(f"FAIL {path} (code cell {cell}): {err.msg}: {(err.text or '').strip()}")
+          print(f"{len(notebooks)} notebooks checked, {failures} failed")
+          sys.exit(1 if failures else 0)
+          PY
+
+      - name: Compile Python files
+        run: |
+          python - <<'PY'
+          import pathlib
+          import py_compile
+          import sys
+
+          failures = 0
+          files = sorted(p for p in pathlib.Path(".").rglob("*.py") if ".git" not in p.parts)
+          for path in files:
+              try:
+                  py_compile.compile(str(path), doraise=True)
+              except py_compile.PyCompileError as err:
+                  failures += 1
+                  print(f"FAIL {err.msg}")
+          print(f"{len(files)} Python files checked, {failures} failed")
+          sys.exit(1 if failures else 0)
+          PY

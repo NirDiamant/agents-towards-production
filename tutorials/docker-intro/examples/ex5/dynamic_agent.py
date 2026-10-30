@@ -6,7 +6,7 @@ client = OpenAI()
 question = os.getenv("QUESTION", "What is the capital of France?")
 
 response = client.chat.completions.create(
-    model="gpt-4o-mini",
+    model="gpt-5.4-mini",
     messages=[{"role": "user",  "content": question}],
 )
 
