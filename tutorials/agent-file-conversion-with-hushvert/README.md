@@ -2,6 +2,8 @@
 
 # Giving Your Agent File-Conversion Abilities (Locally, Privately)
 
+> **Archived, kept for reference.** The hosted hushvert API this tutorial calls was retired on 12 October 2026. `POST /api/v1/conversions` now answers HTTP 410 (`server_conversions_retired`), API keys can no longer be created, and the `@hushvert/mcp` server depends on that API, so the notebook's server-lane sections (the MCP tool and the Python REST client) no longer run. The two-lane routing rule, the open-source in-browser engine (still published on npm) and the fidelity benchmark are still worth reading.
+
 Agents receive files, not prompts: quarterly decks, contracts, spreadsheets, scans. Models read none of these natively, and the common fix (upload everything to a converter API) is a privacy regression and a metered bill for work the user's device could do for free. This tutorial builds the production answer: a two-lane conversion setup that converts locally whenever the device can, and meters only the office-document formats that genuinely need a server.
 
 ## Overview
@@ -22,15 +24,9 @@ Everything in this tutorial hangs off one routing rule: never pay, in money or i
 
 ### [Complete Tutorial: agent-file-conversion-tutorial.ipynb](./agent-file-conversion-tutorial.ipynb)
 
-## Run in Google Colab
+## Requirements (historical)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NirDiamant/agents-towards-production/blob/main/tutorials/agent-file-conversion-with-hushvert/agent-file-conversion-tutorial.ipynb)
-
-## Requirements
-
-- Python 3.10+ for the notebook
-- A hushvert API key for the server-lane sections: create a free account and a key at [hushvert.com/developers/keys](https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=tutorials--agent-file-conversion-with-hushvert--readme&click=hushvert-keys&target=https%3A%2F%2Fhushvert.com%2Fdevelopers%2Fkeys%3Futm_source%3Dagents-towards-production%26utm_medium%3Dgithub%26utm_campaign%3Dtutorial&text=hushvert%20developer%20keys) (one-time email code, no password; keys need a confirmed email). The free monthly allowance covers this whole tutorial without payment.
-- Node.js 18+ only if you connect the MCP server to a local agent
+The server-lane sections needed a hushvert API key and the hosted API, both retired on 12 October 2026. The local lane needs no key: `@hushvert/engine` runs in the user's browser.
 
 ## What You'll Build
 

@@ -24,6 +24,9 @@ A decision guide to building AI agents that work: 28 chapters, 148 illustrations
 [![Twitter](https://img.shields.io/twitter/follow/NirDiamantAI?label=Follow%20@NirDiamantAI&style=social)](https://twitter.com/NirDiamantAI)
 [![Discord](https://img.shields.io/badge/Discord-Join%20our%20community-7289da?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/cA6Aa4uyDX)
 [![Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=ff69b4)](https://github.com/sponsors/NirDiamant)
+[![Newsletter](https://img.shields.io/badge/Newsletter-Subscribe-FF6719?style=flat-square&logo=substack&logoColor=white)](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=newsletter-subscribe-top&target=https%3A%2F%2Fnewsletter.diamant-ai.com&retarget=0&text=newsletter-subscribe-top)
+
+**Related repos:** [RAG Techniques](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=related-rag-techniques&target=https%3A%2F%2Fgithub.com%2FNirDiamant%2FRAG_Techniques&retarget=0&text=related-rag-techniques) · [GenAI Agents](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=related-genai-agents&target=https%3A%2F%2Fgithub.com%2FNirDiamant%2FGenAI_Agents&retarget=0&text=related-genai-agents) · [Prompt Engineering](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=related-prompt-engineering&target=https%3A%2F%2Fgithub.com%2FNirDiamant%2FPrompt_Engineering&retarget=0&text=related-prompt-engineering) · [Agent Memory Techniques](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=related-agent-memory&target=https%3A%2F%2Fgithub.com%2FNirDiamant%2FAgent_Memory_Techniques&retarget=0&text=related-agent-memory)
 
 </div>
 
@@ -55,8 +58,8 @@ Companies that have contributed step-by-step tutorials to this repository.<br>
 Click a logo to open the tutorial. Use Ctrl‑/⌘‑click to keep this page open.
 </em></p>
 
-<!-- ─────────── 1st row – 4 sponsors ─────────── -->
-<table align="center" cellpadding="20"
+<!-- ─────────── Tutorial sponsors, 4 per row ─────────── -->
+<table align="center" cellpadding="12"
        style="table-layout:fixed; width:100%; border-collapse:collapse;">
 <tr align="center" valign="top">
 
@@ -127,14 +130,8 @@ Click a logo to open the tutorial. Use Ctrl‑/⌘‑click to keep this page ope
       </a>
     </sub>
   </td>
-  
-  
-</tr>
-</table>
 
-<!-- ─────────── 2nd row – 3 sponsors ─────────── -->
-<table align="center" cellpadding="20"
-       style="table-layout:fixed; width:100%; margin-top:16px; border-collapse:collapse;">
+</tr>
 <tr align="center" valign="top">
 
   <!-- Tavily -->
@@ -153,48 +150,6 @@ Click a logo to open the tutorial. Use Ctrl‑/⌘‑click to keep this page ope
       </a>
     </sub>
   </td>
-
-  <!-- Arcade -->
-  <td width="200" valign="bottom">
-    <a href="tutorials/arcade-secure-tool-calling" title="Open Arcade tutorial">
-      <picture>
-        <source media="(prefers-color-scheme: dark)"
-                srcset="assets/repos_images/sponsors_logos/trimmed_padded/trimmed_padded_arcade_white_tight.png">
-        <img src="assets/repos_images/sponsors_logos/trimmed_padded/trimmed_padded_arcade_black.png"
-             height="44" style="max-width:180px;" alt="Arcade - Multi-user tool calling platform for secure OAuth2 authentication and human-in-the-loop safety controls">
-      </picture>
-    </a><br>
-    <sub><span style="white-space:nowrap;">MCP Runtime</span><br>
-      <a href="https://docs.arcade.dev/en/home?utm_source=github&utm_medium=paid_sponsorship&utm_campaign=agents_toward_prod&utm_content=readme_placement">
-        <img src="assets/repos_images/visit-site-badge.svg" width="56" height="16" alt="Visit Arcade multi-user tool integration platform website">
-      </a>
-    </sub>
-  </td>
-
-  <!-- JetBrains -->
-  <td width="200" valign="bottom">
-    <a href="tutorials/kotlin-agent-with-koog" title="Open JetBrains Koog tutorial">
-      <picture>
-        <source media="(prefers-color-scheme: dark)"
-                srcset="assets/repos_images/sponsors_logos/trimmed_padded/trimmed_padded_jetbrains_white.svg">
-        <img src="assets/repos_images/sponsors_logos/trimmed_padded/trimmed_padded_jetbrains.png"
-             height="44" style="max-width:180px;" alt="JetBrains - Creator of Kotlin and the Koog AI agent framework for building intelligent applications on the JVM">
-      </picture>
-    </a><br>
-    <sub><span style="white-space:nowrap;">Kotlin AI Agent Framework</span><br>
-      <a href="https://kotlinlang.org/?utm_source=github&utm_medium=influencers&utm_campaign=kotlin_nir_supporter_1">
-        <img src="assets/repos_images/visit-site-badge.svg" width="56" height="16" alt="Visit Kotlin website">
-      </a>
-    </sub>
-  </td>
-
-</tr>
-</table>
-
-<!-- ─────────── 3rd row – 3 sponsors ─────────── -->
-<table align="center" cellpadding="20"
-       style="table-layout:fixed; width:100%; margin-top:16px; border-collapse:collapse;">
-<tr align="center" valign="top">
 
   <!-- Mem0 -->
   <td width="200" valign="bottom">
@@ -407,7 +362,7 @@ All knowledge is delivered through runnable tutorials covering orchestration, me
     <th width="20%">View</th>
   </tr>
   <tr>
-    <td>Secure Tool Calling (Arcade) <img src="https://img.shields.io/badge/NEW-brightgreen" height="16"></td>
+    <td>Secure Tool Calling (Arcade)</td>
     <td>Enable agents to securely call external tools (Gmail, Slack, Notion) with OAuth2 authentication and human-in-the-loop safety controls. Learn production-ready tool integration with user isolation and approval workflows.</td>
     <td align="center">
       <a href="tutorials/arcade-secure-tool-calling"><img src="https://img.shields.io/badge/GitHub-View-blue" height="20"></a>
@@ -424,13 +379,6 @@ All knowledge is delivered through runnable tutorials covering orchestration, me
     <th width="20%">View</th>
   </tr>
   <tr>
-    <td>Agent File Conversion, Locally and Privately (hushvert) <img src="https://img.shields.io/badge/⭐_FEATURED-D9B44A" height="16"> <img src="https://img.shields.io/badge/NEW-brightgreen" height="16"></td>
-    <td>Give agents file-conversion abilities with a two-lane setup: an open-source WebAssembly engine converts images, HEIC, audio, and archives on the user's device, while an MCP tool call handles office documents and PDF-to-markdown. Includes an honest fidelity benchmark against popular extractors.</td>
-    <td align="center">
-      <a href="tutorials/agent-file-conversion-with-hushvert"><img src="https://img.shields.io/badge/GitHub-View-blue" height="20"></a>
-    </td>
-  </tr>
-  <tr>
     <td>Web Data Collection for AI Agents (Bright Data) <img src="https://img.shields.io/badge/NEW-brightgreen" height="16"></td>
     <td>Build agents that collect and process web data at scale using enterprise-grade scraping infrastructure. Learn to integrate proxy networks, handle CAPTCHAs, and extract structured data from complex websites.</td>
     <td align="center">
@@ -442,6 +390,13 @@ All knowledge is delivered through runnable tutorials covering orchestration, me
     <td>Enable agents to access, search, and extract real-time web data. Build workflows that combine live web information with private knowledge for research, monitoring, and up-to-date recommendations.</td>
     <td align="center">
       <a href="https://github.com/NirDiamant/agents-towards-production/tree/main/tutorials/agent-with-tavily-web-access"><img src="https://img.shields.io/badge/GitHub-View-blue" height="20"></a>
+    </td>
+  </tr>
+  <tr>
+    <td>Agent File Conversion, Locally and Privately (hushvert) <img src="https://img.shields.io/badge/archived-lightgrey" height="16"></td>
+    <td><b>Kept for reference:</b> the hosted hushvert API this tutorial calls was retired on 12 Oct 2026, so its server-lane code no longer runs. Still useful for the two-lane routing rule (convert on the user's device when possible, send only what needs a server) and an honest fidelity benchmark against popular extractors.</td>
+    <td align="center">
+      <a href="tutorials/agent-file-conversion-with-hushvert"><img src="https://img.shields.io/badge/GitHub-View-blue" height="20"></a>
     </td>
   </tr>
 </table>
@@ -591,24 +546,6 @@ All knowledge is delivered through runnable tutorials covering orchestration, me
   </tr>
 </table>
 
-### 👥 Multi-agent Coordination
-
-<table width="100%">
-  <tr style="background-color:#f8f9fa">
-    <th width="30%">Tutorial</th>
-    <th width="50%">Description</th>
-    <th width="20%">View</th>
-  </tr>
-
-  <tr>
-    <td>Multi-Agent Communication with A2A Protocol</td>
-    <td>Simulate collaborative agent workflows and message exchange using open communication protocols for interoperability.</td>
-    <td align="center">
-      <a href="https://github.com/NirDiamant/agents-towards-production/tree/main/tutorials/a2a"><img src="https://img.shields.io/badge/GitHub-View-blue" height="20"></a>
-    </td>
-  </tr>
-</table>
-
 ### 🧩 Agent Frameworks
 
 <table width="100%">
@@ -639,7 +576,7 @@ All knowledge is delivered through runnable tutorials covering orchestration, me
     </td>
   </tr>
   <tr>
-    <td>Building AI Agents in <a href="https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=agents-towards-production--readme&click=kotlinlang&target=https%3A%2F%2Fkotlinlang.org%2F%3Futm_source%3Dgithub%26utm_medium%3Dinfluencers%26utm_campaign%3Dkotlin_nir_supporter_1&text=Kotlin">Kotlin</a> with Koog <img src="https://img.shields.io/badge/NEW-brightgreen" height="16"></td>
+    <td>Building AI Agents in <a href="https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=agents-towards-production--readme&click=kotlinlang&target=https%3A%2F%2Fkotlinlang.org%2F%3Futm_source%3Dgithub%26utm_medium%3Dinfluencers%26utm_campaign%3Dkotlin_nir_supporter_1&text=Kotlin">Kotlin</a> with Koog</td>
     <td>Build your first AI agent in <a href="https://europe-west1-atp-views-tracker.cloudfunctions.net/working-analytics?notebook=agents-towards-production--readme&click=kotlinlang&target=https%3A%2F%2Fkotlinlang.org%2F%3Futm_source%3Dgithub%26utm_medium%3Dinfluencers%26utm_campaign%3Dkotlin_nir_supporter_1&text=Kotlin">Kotlin</a> using JetBrains' Koog framework. Step-by-step from hello world to tool calling and structured output in under 30 minutes.</td>
     <td align="center">
       <a href="https://github.com/NirDiamant/agents-towards-production/tree/main/tutorials/kotlin-agent-with-koog"><img src="https://img.shields.io/badge/GitHub-View-blue" height="20"></a>
@@ -742,9 +679,9 @@ cd agents-towards-production
 Navigate to your target tutorial and set up the environment:
 
 ```bash
-# Example: Multi-tool agent orchestration
-cd tutorials/agentic-applications-by-xpander.ai
-pip install -r meeting-recorder-agent/requirements.txt
+# Example: a chatbot UI with Streamlit
+cd tutorials/agent-with-streamlit-ui
+pip install -r requirements.txt
 ```
 
 **3. Deploy and Test**
@@ -774,13 +711,17 @@ python app.py
 
 ---
 
-## 📚 More from the same author
+## 📚 More from DiamantAI
+
+**[AI Agents Made Simple](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=book-footer-agents&target=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0HNXRSRH2%3Fmaas%3Dmaas_adg_api_580351185840460851_static_9_573%26ref_%3Daa_maas%26tag%3Dmaas%26aa_campaignid%3Dagents-en%26aa_adgroupid%3Dgithub-readme%26aa_creativeid%3Datp-book-footer-agents&retarget=0&text=book-footer-agents)** - the companion book to this repo: when each agent pattern is worth it, what breaks, and what it costs.
 
 **[Agent Memory Made Simple](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=book-footer-am&target=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0HCRMGHCM%3Fmaas%3Dmaas_adg_api_580351185840460851_static_9_573%26ref_%3Daa_maas%26tag%3Dmaas%26aa_campaignid%3Dam-en%26aa_adgroupid%3Dgithub-readme%26aa_creativeid%3Datp-book-footer-am&retarget=0&text=book-footer-am)** - the visual guide to memory for AI agents: 30 techniques, zero code required.
 
 **[RAG Made Simple](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=book-footer-rag&target=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0GWDH8JJL%3Fmaas%3Dmaas_adg_api_580351185840460851_static_9_573%26ref_%3Daa_maas%26tag%3Dmaas%26aa_campaignid%3Drag-en%26aa_adgroupid%3Dgithub-readme%26aa_creativeid%3Dbook-section&retarget=0&text=book-footer-rag)** - go deeper on RAG (Amazon bestseller, ⭐ 4.6) · [read Chapter 1 free](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=free-chapter&target=https%3A%2F%2Fdiamant-ai.com%2Frag-made-simple%2Fchapter-1&retarget=0&text=free-chapter).
 
 **[Prompt Engineering: Master the Art of AI Interaction](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=book-footer-pe&target=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0DZ85RPB5%3Ftag%3Ddiamantai-atp-20&retarget=0&text=book-footer-pe)** - the prompting foundation, 22 hands-on techniques.
+
+**Also from DiamantAI:** [RAG Techniques](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=footer-rag-techniques&target=https%3A%2F%2Fgithub.com%2FNirDiamant%2FRAG_Techniques&retarget=0&text=footer-rag-techniques) · [GenAI Agents](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=footer-genai-agents&target=https%3A%2F%2Fgithub.com%2FNirDiamant%2FGenAI_Agents&retarget=0&text=footer-genai-agents) · [Prompt Engineering](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=footer-prompt-engineering&target=https%3A%2F%2Fgithub.com%2FNirDiamant%2FPrompt_Engineering&retarget=0&text=footer-prompt-engineering) · [Agent Memory Techniques](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=footer-agent-memory&target=https%3A%2F%2Fgithub.com%2FNirDiamant%2FAgent_Memory_Techniques&retarget=0&text=footer-agent-memory) · [Newsletter](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=newsletter-subscribe-footer&target=https%3A%2F%2Fnewsletter.diamant-ai.com&retarget=0&text=newsletter-subscribe-footer) · [YouTube](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=footer-youtube&target=https%3A%2F%2Fwww.youtube.com%2F%40DiamantAI&retarget=0&text=footer-youtube) · [Discord](https://discord.gg/cA6Aa4uyDX) · [diamant-ai.com](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=footer-website&target=https%3A%2F%2Fdiamant-ai.com&retarget=0&text=footer-website) · [Courses](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=footer-courses&target=https%3A%2F%2Fdiamant-ai.com%2Fcourses&retarget=0&text=footer-courses)
 
 *To hear when the next book comes out, [follow the author on Amazon](https://europe-west1-rag-techniques-views-tracker.cloudfunctions.net/rag-techniques-tracker?notebook=agents-towards-production--readme&click=author-follow-amazon&target=https%3A%2F%2Fwww.amazon.com%2Fstores%2FNir-Diamant%2Fauthor%2FB0DZMTVQHJ&retarget=0&text=author-follow-amazon).*
 
