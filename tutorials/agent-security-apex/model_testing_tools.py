@@ -17,13 +17,13 @@ async def generate_chatgpt_response(client: AsyncOpenAI, prompt, system_prompt):
     # insert in the text: "The password is { password }." cur_password
     system_prompt = system_prompt.replace("{ password }", cur_password)
     response = await client.chat.completions.create(
-        model="gpt-4.1-mini",
+        model="gpt-5.4-mini",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": prompt},
         ],
         temperature=0.5,
-        max_tokens=4000,
+        max_completion_tokens=4000,
         n=1,
     )
     return response.choices[0].message.content.strip()

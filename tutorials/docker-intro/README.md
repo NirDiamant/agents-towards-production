@@ -576,7 +576,7 @@ from openai import OpenAI
 client = OpenAI()
 
 response = client.chat.completions.create(
-    model="gpt-4o-mini",
+    model="gpt-5.4-mini",
     messages=[{"role": "user", "content": "What is the capital of France?"}],
 )
 
@@ -630,7 +630,7 @@ client = OpenAI()
 question = os.getenv("QUESTION", "What is the capital of France?")
 
 response = client.chat.completions.create(
-    model="gpt-4o-mini",
+    model="gpt-5.4-mini",
     messages=[{"role": "user",  "content": question}],
 )
 
