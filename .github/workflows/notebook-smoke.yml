@@ -47,7 +47,10 @@ jobs:
                       continue
                   source = cell.source
                   if source.lstrip().startswith("%%"):
-                      continue  # cell magic: the body is not Python (%%bash, %%writefile, ...)
+                      first, _, rest = source.lstrip().partition("\n")
+                      if (first[2:].split() or [""])[0] not in {"capture", "time", "timeit", "prun"}:
+                          continue  # cell magic whose body is not Python (%%bash, %%writefile, ...)
+                      source = rest  # %%capture and friends wrap ordinary Python: check the body
                   for line in source.splitlines():
                       match = ipython_line.match(line)
                       lines.append(match.group(1) + "pass" if match else line)
