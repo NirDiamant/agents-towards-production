@@ -24,7 +24,7 @@ suspend fun main() {
         //   - a system prompt (the agent's personality / instructions)
         val agent = AIAgent(
             promptExecutor = executor,
-            llmModel = OpenAIModels.Chat.GPT4oMini,
+            llmModel = OpenAIModels.Chat.GPT5_4Mini,
             systemPrompt = "You are a concise assistant. Answer in one or two sentences.",
         )
 

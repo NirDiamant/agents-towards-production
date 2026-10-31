@@ -1,5 +1,6 @@
-# Gradle
+# Gradle and Kotlin
 .gradle/
+.kotlin/
 build/
 
 # IDE

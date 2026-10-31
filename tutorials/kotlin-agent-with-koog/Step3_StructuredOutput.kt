@@ -4,7 +4,11 @@ import ai.koog.agents.core.tools.annotations.LLMDescription
 import ai.koog.agents.ext.agent.structuredOutputWithToolsStrategy
 import ai.koog.prompt.dsl.prompt
 import ai.koog.prompt.executor.clients.openai.OpenAIModels
+import ai.koog.prompt.executor.clients.openai.base.structure.OpenAIStandardJsonSchemaGenerator
 import ai.koog.prompt.executor.llms.all.simpleOpenAIExecutor
+import ai.koog.prompt.structure.StructuredRequest
+import ai.koog.prompt.structure.StructuredRequestConfig
+import ai.koog.prompt.structure.json.JsonStructure
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -57,17 +61,27 @@ suspend fun main() {
         prompt = prompt("city-analyst") {
             system("You are a knowledgeable city analyst. When asked about a city, provide accurate structured data.")
         },
-        model = OpenAIModels.Chat.GPT4o,
-        maxAgentIterations = 5,
+        model = OpenAIModels.Chat.GPT5_4,
+        // Every node the strategy visits counts as one iteration; the structured output
+        // strategy needs 6 even without tool calls, so 5 would be too few.
+        maxAgentIterations = 10,
     )
 
     simpleOpenAIExecutor(apiKey).use { executor ->
         // structuredOutputWithToolsStrategy<CityAnalysis>() is a built-in Koog strategy
         // that lets the agent call tools in a loop and then finish with a structured
         // output of the specified type once the process is complete.
+        // Its config says how to request the structure: Native sends a JSON schema generated
+        // from CityAnalysis (in the format OpenAI accepts) through the model's structured output API.
         val agent = AIAgent(
             promptExecutor = executor,
-            strategy = structuredOutputWithToolsStrategy<CityAnalysis>(),
+            strategy = structuredOutputWithToolsStrategy<CityAnalysis>(
+                StructuredRequestConfig(
+                    default = StructuredRequest.Native(
+                        JsonStructure.create<CityAnalysis>(schemaGenerator = OpenAIStandardJsonSchemaGenerator)
+                    )
+                )
+            ),
             agentConfig = agentConfig,
         )
 
