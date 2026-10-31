@@ -594,7 +594,7 @@ All knowledge is delivered through runnable tutorials covering orchestration, me
   </tr>
   <tr>
     <td>Fine-Tuning AI Agents for Domain Expertise & Efficiency</td>
-    <td>Learn how to fine-tune language models for specialized agent behavior, domain expertise, and efficient, cost-effective responses. Covers data preparation, training, evaluation, and integration into agent workflows.</td>
+    <td>Learn how to fine-tune language models for specialized agent behavior and domain expertise, using LoRA on a small open model (Hugging Face TRL + PEFT) that trains on a laptop with no API key. Covers data preparation, training, evaluation against a facts-in-the-prompt baseline, and integration into agent workflows.</td>
     <td align="center">
       <a href="https://github.com/NirDiamant/agents-towards-production/tree/main/tutorials/fine-tuning-agents"><img src="https://img.shields.io/badge/GitHub-View-blue" height="20"></a>
     </td>
