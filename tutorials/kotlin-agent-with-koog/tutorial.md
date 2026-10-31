@@ -79,8 +79,8 @@ Below is a walkthrough of the `build.gradle.kts` so you understand what each dep
 
 ```kotlin
 plugins {
-    kotlin("jvm") version "2.1.0"
-    kotlin("plugin.serialization") version "2.1.0"
+    kotlin("jvm") version "2.3.10"
+    kotlin("plugin.serialization") version "2.3.10"
 }
 
 repositories {
@@ -89,13 +89,13 @@ repositories {
 
 dependencies {
     // Koog AI agent framework by JetBrains
-    implementation("ai.koog:koog-agents:0.6.2")
+    implementation("ai.koog:koog-agents:0.8.0")
 
     // Kotlin coroutines (required for suspend-based agent execution)
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.1")
 
     // Kotlin serialization (required for structured output and tool definitions)
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.10.0")
 
     // SLF4J no-op logger to suppress logging noise in tutorial output
     implementation("org.slf4j:slf4j-nop:2.0.16")
@@ -200,7 +200,7 @@ suspend fun main() {
         //   - a system prompt (the agent's personality / instructions)
         val agent = AIAgent(
             promptExecutor = executor,
-            llmModel = OpenAIModels.Chat.GPT4oMini,
+            llmModel = OpenAIModels.Chat.GPT5_4Mini,
             systemPrompt = "You are a concise assistant. Answer in one or two sentences.",
         )
 
@@ -319,7 +319,7 @@ suspend fun main() {
     simpleOpenAIExecutor(apiKey).use { executor ->
         val agent = AIAgent(
             promptExecutor = executor,
-            llmModel = OpenAIModels.Chat.GPT4oMini,
+            llmModel = OpenAIModels.Chat.GPT5_4Mini,
             systemPrompt = """
                 You are a helpful assistant with access to tools for weather, calculations, and fact lookup.
                 When asked a question, use the appropriate tools to find the answer.
@@ -418,7 +418,7 @@ Note the `@property:LLMDescription` syntax. In Kotlin data classes, annotations 
 
 ### Configuring the Structured Output Strategy
 
-Koog provides a built-in `structuredOutputWithToolsStrategy<T>()` function that handles the entire structured output flow. You pass it as the agent's strategy, and Koog takes care of sending the data class schema to the model, letting the agent call tools in a loop if needed, and finishing with a typed response once the process is complete. No custom strategy graph required.
+Koog provides a built-in `structuredOutputWithToolsStrategy<T>()` function that handles the entire structured output flow. You pass it as the agent's strategy along with a `StructuredRequestConfig` that says how to request the structure (here `StructuredRequest.Native` with a `JsonStructure` generated from the data class by `OpenAIStandardJsonSchemaGenerator`, which emits the schema format OpenAI accepts), and Koog takes care of sending the data class schema to the model, letting the agent call tools in a loop if needed, and finishing with a typed response once the process is complete. No custom strategy graph required.
 
 The strategy is available at `ai.koog.agents.ext.agent.structuredOutputWithToolsStrategy` and also includes optional settings such as `fixingParser` and `parallelTools`.
 
@@ -430,7 +430,11 @@ import ai.koog.agents.core.agent.config.AIAgentConfig
 import ai.koog.agents.ext.agent.structuredOutputWithToolsStrategy
 import ai.koog.prompt.dsl.prompt
 import ai.koog.prompt.executor.clients.openai.OpenAIModels
+import ai.koog.prompt.executor.clients.openai.base.structure.OpenAIStandardJsonSchemaGenerator
 import ai.koog.prompt.executor.llms.all.simpleOpenAIExecutor
+import ai.koog.prompt.structure.StructuredRequest
+import ai.koog.prompt.structure.StructuredRequestConfig
+import ai.koog.prompt.structure.json.JsonStructure
 
 suspend fun main() {
     val apiKey = System.getenv("OPENAI_API_KEY")
@@ -440,17 +444,27 @@ suspend fun main() {
         prompt = prompt("city-analyst") {
             system("You are a knowledgeable city analyst. When asked about a city, provide accurate structured data.")
         },
-        model = OpenAIModels.Chat.GPT4o,
-        maxAgentIterations = 5,
+        model = OpenAIModels.Chat.GPT5_4,
+        // Every node the strategy visits counts as one iteration; the structured output
+        // strategy needs 6 even without tool calls, so 5 would be too few.
+        maxAgentIterations = 10,
     )
 
     simpleOpenAIExecutor(apiKey).use { executor ->
         // structuredOutputWithToolsStrategy<CityAnalysis>() is a built-in Koog strategy
         // that lets the agent call tools in a loop and then finish with a structured
         // output of the specified type once the process is complete.
+        // Its config says how to request the structure: Native sends a JSON schema generated
+        // from CityAnalysis (in the format OpenAI accepts) through the model's structured output API.
         val agent = AIAgent(
             promptExecutor = executor,
-            strategy = structuredOutputWithToolsStrategy<CityAnalysis>(),
+            strategy = structuredOutputWithToolsStrategy<CityAnalysis>(
+                StructuredRequestConfig(
+                    default = StructuredRequest.Native(
+                        JsonStructure.create<CityAnalysis>(schemaGenerator = OpenAIStandardJsonSchemaGenerator)
+                    )
+                )
+            ),
             agentConfig = agentConfig,
         )
 

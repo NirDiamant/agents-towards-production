@@ -1,6 +1,6 @@
 plugins {
-    kotlin("jvm") version "2.1.0"
-    kotlin("plugin.serialization") version "2.1.0"
+    kotlin("jvm") version "2.3.10"
+    kotlin("plugin.serialization") version "2.3.10"
 }
 
 repositories {
@@ -9,13 +9,13 @@ repositories {
 
 dependencies {
     // Koog AI agent framework by JetBrains
-    implementation("ai.koog:koog-agents:0.6.2")
+    implementation("ai.koog:koog-agents:0.8.0")
 
     // Kotlin coroutines (required for suspend-based agent execution)
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.1")
 
     // Kotlin serialization (required for structured output and tool definitions)
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.10.0")
 
     // SLF4J no-op logger to suppress logging noise in tutorial output
     implementation("org.slf4j:slf4j-nop:2.0.16")

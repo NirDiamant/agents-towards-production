@@ -95,7 +95,7 @@ suspend fun main() {
     simpleOpenAIExecutor(apiKey).use { executor ->
         val agent = AIAgent(
             promptExecutor = executor,
-            llmModel = OpenAIModels.Chat.GPT4oMini,
+            llmModel = OpenAIModels.Chat.GPT5_4Mini,
             systemPrompt = """
                 You are a helpful assistant with access to tools for weather, calculations, and fact lookup.
                 When asked a question, use the appropriate tools to find the answer.

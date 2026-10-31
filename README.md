@@ -441,8 +441,8 @@ All knowledge is delivered through runnable tutorials covering orchestration, me
     </td>
   </tr>
   <tr>
-    <td>Self-Improving Memory with Mem0: Hybrid Vector & Graph Storage <img src="https://img.shields.io/badge/NEW-brightgreen" height="16"></td>
-    <td>Build intelligent agents with self-improving memory that automatically extracts insights, resolves conflicts, and evolves with each interaction. Learn hybrid memory architecture combining vector search for semantic recall and graph databases for relationship mapping.</td>
+    <td>Self-Improving Memory with Mem0: Hybrid Vector, Keyword & Entity Search <img src="https://img.shields.io/badge/NEW-brightgreen" height="16"></td>
+    <td>Build intelligent agents with self-improving memory that automatically extracts insights and evolves with each interaction. Learn hybrid retrieval that combines vector search for semantic recall with keyword and entity matching, on mem0 2.x.</td>
     <td align="center">
       <a href="https://github.com/NirDiamant/agents-towards-production/tree/main/tutorials/agent-memory-with-mem0"><img src="https://img.shields.io/badge/GitHub-View-blue" height="20"></a>
     </td>
@@ -594,7 +594,7 @@ All knowledge is delivered through runnable tutorials covering orchestration, me
   </tr>
   <tr>
     <td>Fine-Tuning AI Agents for Domain Expertise & Efficiency</td>
-    <td>Learn how to fine-tune language models for specialized agent behavior, domain expertise, and efficient, cost-effective responses. Covers data preparation, training, evaluation, and integration into agent workflows.</td>
+    <td>Learn how to fine-tune language models for specialized agent behavior and domain expertise, using LoRA on a small open model (Hugging Face TRL + PEFT) that trains on a laptop with no API key. Covers data preparation, training, evaluation against a facts-in-the-prompt baseline, and integration into agent workflows.</td>
     <td align="center">
       <a href="https://github.com/NirDiamant/agents-towards-production/tree/main/tutorials/fine-tuning-agents"><img src="https://img.shields.io/badge/GitHub-View-blue" height="20"></a>
     </td>
