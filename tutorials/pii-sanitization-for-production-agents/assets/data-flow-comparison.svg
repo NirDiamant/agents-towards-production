@@ -1,0 +1,51 @@
+<svg viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <style>
+    .box { fill: #f8f9fa; stroke: #333; stroke-width: 1.5; rx: 6; }
+    .boundary { fill: none; stroke: #2e7d32; stroke-width: 2; stroke-dasharray: 6,4; rx: 10; }
+    .external { fill: #fff3e0; stroke: #e65100; stroke-width: 1.5; rx: 6; }
+    .arrow { stroke: #333; stroke-width: 1.8; marker-end: url(#arrowhead); fill: none; }
+    .label { font-size: 13px; fill: #222; }
+    .title { font-size: 15px; font-weight: bold; fill: #111; }
+    .small { font-size: 11px; fill: #555; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Approach 1: fully local -->
+  <text x="20" y="30" class="title">Approach 1 — Regex (local)</text>
+  <rect class="boundary" x="20" y="45" width="380" height="90"/>
+  <text x="35" y="62" class="small">your trust boundary</text>
+  <rect class="box" x="40" y="75" width="140" height="40" />
+  <text x="55" y="100" class="label">Raw text</text>
+  <line x1="180" y1="95" x2="230" y2="95" class="arrow"/>
+  <rect class="box" x="230" y="75" width="140" height="40" />
+  <text x="245" y="100" class="label">Sanitized</text>
+  <text x="35" y="150" class="small">Text never leaves your infrastructure. Misses contextual PII (names, addresses without a fixed format).</text>
+
+  <!-- Approach 2: crosses boundary twice -->
+  <text x="20" y="200" class="title">Approach 2 — TrustBoost (hosted API)</text>
+  <rect class="boundary" x="20" y="215" width="140" height="90"/>
+  <text x="30" y="232" class="small">your boundary</text>
+  <rect class="box" x="35" y="245" width="110" height="40" />
+  <text x="48" y="270" class="label">Raw text</text>
+
+  <line x1="160" y1="265" x2="215" y2="265" class="arrow"/>
+  <rect class="external" x="215" y="245" width="150" height="40" />
+  <text x="228" y="264" class="label">TrustBoost</text>
+  <text x="228" y="278" class="small">(Render/AWS)</text>
+
+  <line x1="365" y1="265" x2="420" y2="265" class="arrow"/>
+  <rect class="external" x="420" y="245" width="150" height="40" />
+  <text x="435" y="264" class="label">OpenAI</text>
+  <text x="435" y="278" class="small">GPT-4o-mini</text>
+
+  <line x1="420" y1="285" x2="290" y2="330" class="arrow"/>
+  <rect class="box" x="130" y="330" width="140" height="40" />
+  <text x="145" y="355" class="label">Sanitized</text>
+
+  <text x="20" y="395" class="small">Raw text crosses your trust boundary twice (TrustBoost, then OpenAI) before sanitization completes.</text>
+  <text x="20" y="410" class="small">Neither service stores it afterward (see PRIVACY.md) — but it does leave your infrastructure. Handles contextual + multilingual PII regex misses.</text>
+</svg>
