@@ -41,14 +41,21 @@ class Index:
     """append_only=True is the naive version: every upsert adds a row."""
     def __init__(self, append_only=True):
         self.rows = []          # naive
-        self.by_key = {}        # idempotent
+        self.by_key = {}        # idempotent: keyed on (doc_id, chunk_no)
         self.append_only = append_only
     def upsert(self, doc_id, chunk_no, text, vec, c):
         c.upserted += 1
         if self.append_only:
             self.rows.append((doc_id, chunk_no, text, vec))
         else:
-            self.by_key[(doc_id, chunk_no, content_hash(text))] = (text, vec)
+            # No content hash in the key: a corrected chunk must overwrite the bad one, not sit beside it.
+            self.by_key[(doc_id, chunk_no)] = (text, vec)
+    def prune(self, doc_id, n_chunks):
+        """Drop a document's chunks past its new end, so a shorter re-ingest leaves nothing stale."""
+        if self.append_only: return 0
+        stale = [k for k in self.by_key if k[0] == doc_id and k[1] >= n_chunks]
+        for k in stale: del self.by_key[k]
+        return len(stale)
     def size(self):
         return len(self.rows) if self.append_only else len(self.by_key)
     def duplicates(self):
@@ -68,8 +75,10 @@ def ingest_naive(docs, index, c, fail_at=None):
         if fail_at is not None and n == fail_at:
             raise Boom(f"embedding provider returned 429 at document {n}")
         text = parse(doc, c)
-        for i, ch in enumerate(chunk(text)):
+        chunks = chunk(text)
+        for i, ch in enumerate(chunks):
             index.upsert(doc["id"], i, ch, embed(ch, c), c)
+        index.prune(doc["id"], len(chunks))
     return n + 1
 
 if __name__ == "__main__":

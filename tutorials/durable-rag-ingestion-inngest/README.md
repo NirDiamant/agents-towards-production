@@ -21,13 +21,13 @@ and no account.
   5,000, retry it, and count the wasted embedding calls and the duplicate chunks yourself
 - **Durable steps**: wrapping each stage in `step.run()` so a retry resumes at the document that
   failed instead of at document one
-- **Idempotent upserts** keyed on document ID plus content hash, so re-ingesting the same file
-  updates in place rather than adding a second copy
+- **Idempotent upserts** keyed on document ID and chunk number, so re-ingesting a file updates in
+  place rather than adding a second copy, and a corrected file leaves no stale chunks behind
 - **Fan-out per document**, so one unparseable file fails on its own instead of taking the run down,
   and when `step.invoke` is the better tool than an event
 - **Flow control**: throttling and per-tenant concurrency, so a historical backfill does not starve
   live ingestion
-- **A human review gate** with `step.wait_for_event()` for documents that fail parsing
+- **A human review gate** with `step.wait_for_event()` for documents that parse to nothing
 - **When you do not need any of this**, which is a real answer for a lot of pipelines
 
 ## 📓 Tutorial
@@ -57,9 +57,9 @@ and then keeps its place when things go wrong:
 
 - A failure at document 3,000 costs you the remaining 2,000, not all 5,000
 - Re-running the whole pipeline over an unchanged corpus adds zero duplicate chunks
-- One malformed document fails alone and lands in a review queue
+- One malformed document fails alone, and one that parses to nothing waits in a review queue
 - A backfill runs at a throttled rate without starving live ingestion
-- You fix a parser bug and replay one step against one document
+- You fix a parser bug and re-run only the documents it broke, not the corpus
 
 **Total Tutorial Time**: ~45 minutes
 **Difficulty**: Intermediate (Python, basic RAG concepts, no prior Inngest knowledge assumed)

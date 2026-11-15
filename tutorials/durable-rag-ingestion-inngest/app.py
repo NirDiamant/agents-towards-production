@@ -20,7 +20,7 @@ app = FastAPI()
 client = inngest.Inngest(app_id="rag-ingestion", is_production=False)
 
 CORPUS = {d["id"]: d for d in make_corpus(5000)}
-INDEX = Index(append_only=False)   # idempotent: keyed on doc id + chunk no + content hash
+INDEX = Index(append_only=False)   # idempotent: keyed on doc id + chunk no
 COUNTERS = Counters()
 
 
@@ -102,6 +102,9 @@ def ingest_document(ctx: inngest.ContextSync) -> dict:
             f"upsert-{i}",
             lambda i=i, ch=ch, vec=vec: INDEX.upsert(doc_id, i, ch, vec, COUNTERS),
         )
+
+    # A corrected document can come back with fewer chunks. Drop the ones past its new end.
+    ctx.step.run("prune", lambda: INDEX.prune(doc_id, len(chunks)))
 
     return {"doc_id": doc_id, "chunks": len(chunks), "index_size": INDEX.size()}
 
